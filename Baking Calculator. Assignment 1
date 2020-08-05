@@ -1,0 +1,82 @@
+public class  BakingCalculatorHellen {
+
+	public static int bagsOfFlour(int cookieCount, int loafCount) {
+		double bagsOfflourPercookieCount = 1.0/5/3.33 * 2.25 * 1.0/48;
+		double bagsOfFlourPerloafCount = 1.0/5/3.33 * 1.5/1;
+		return (int) Math.ceil ((cookieCount * bagsOfflourPercookieCount)
+				+ (loafCount * bagsOfFlourPerloafCount));
+	}
+
+	public static int containersOfSalt(int cookieCount, int loafCount) {
+		double containerOfSaltPercookieCount =  1.0/26/6 * 1.0/48;
+		double containerOfSaltPerloafCount = 1.0/26.0/6 * 0.125/1;
+		return (int) Math.ceil ((cookieCount * containerOfSaltPercookieCount) 
+				+ (loafCount * containerOfSaltPerloafCount)); 
+	}
+
+	public static int boxesOfBakingSoda(int cookieCount, int loafCount) {
+		double boxesOfBakingSodaPercookieCount = 1.0/16/6 * 1.0/48;
+		double boxesOfBakingSodaPerloafCount = 1.0/16/6 * 1.0;
+		return (int) Math.ceil ((cookieCount * boxesOfBakingSodaPercookieCount) 
+				+ (loafCount * boxesOfBakingSodaPerloafCount));
+	}
+
+	public static int bottlesOfVanilla(int cookieCount, int loafCount) {
+		double bottlesOfVanillaPercookieCount = 1.0/6 * 1 * 1/48;
+		double bottlesOfVanillaPerloafCount = 1.0/6 * 1;
+		return (int) Math.ceil ((cookieCount * bottlesOfVanillaPercookieCount)
+				+ (loafCount * bottlesOfVanillaPerloafCount));
+	}
+
+	public static int cartonsOfEggs(int cookieCount, int loafCount) {
+		double cartonsOfEggsPercookieCount = 1.0/12 * 2.0 * 1.0/48;
+		double cartonsOfEggsPerloafCount = 1.0/12 * 1.0;
+		return (int) Math.ceil ((cookieCount * cartonsOfEggsPercookieCount) 
+				+ (loafCount * cartonsOfEggsPerloafCount));
+	}
+
+	public static int bagsOfSugar(int cookieCount, int loafCount) {
+		double bagsOfSugarsPercookieCount = 1.0/2 * 1.5 * 1/48;
+		double bagsOfSugarPerloafCount = 1.0/2 * 0.75;
+		return (int) Math.ceil ((cookieCount * bagsOfSugarsPercookieCount) 
+				+ (loafCount * bagsOfSugarPerloafCount));
+	}
+
+	public static int packagesOfButter(int cookieCount, int loafCount) {
+		double packagesOfButterPercookieCount = 1.0/2 * 1.0/48;
+		double packagesOfButterPerloafCount = 1.0/2 * 0.333;
+		return (int) Math.ceil ((cookieCount * packagesOfButterPercookieCount) 
+				+ (loafCount * packagesOfButterPerloafCount));
+		
+	}
+
+	public static int bananas(int cookieCount, int loafCount) {
+		int bananasPercookieCount = 0;
+		int bananasPerloafCount = 3;
+		
+				return (int) Math.ceil ((cookieCount * bananasPercookieCount) 
+				                       +(loafCount   * bananasPerloafCount));
+	}
+
+	public static int bagsOfChocolateChips(int cookieCount, int loafCount) {
+		double bagsOfChocolateChipsPercookieCount = 1.0/2 * 2.5 * 1/48;
+		int bagsOfChocolateChipsPerloafCount = 0;
+		
+				return (int) Math.ceil ((cookieCount * bagsOfChocolateChipsPercookieCount) 
+						               +(loafCount   * bagsOfChocolateChipsPerloafCount));
+	}
+
+	public static double totalCost(int cookieCount, int loafCount) {
+		return (bagsOfFlour(cookieCount, loafCount) * 1.79 
+				+ (containersOfSalt(cookieCount, loafCount)) * 1.09 
+				+ (boxesOfBakingSoda(cookieCount, loafCount)) *1.09
+				+ (bottlesOfVanilla(cookieCount, loafCount)) * 3.99
+				+ (cartonsOfEggs(cookieCount, loafCount)) * 2.19 
+				+ (bagsOfSugar(cookieCount, loafCount)) * 1.99  
+				+ (packagesOfButter(cookieCount, loafCount)) * 4.49
+                + (bagsOfChocolateChips(cookieCount, loafCount))* 3.29
+                + (bananas(cookieCount, loafCount)) * 0.32);
+                           				                        				             				                        				                       	                        				
+	}
+
+}
